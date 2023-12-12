@@ -81,30 +81,6 @@ class App extends Component{
         this.setState({term});
     }
 
-    onFilter = () => {
-        this.setState(({data}) => ({
-            data: data.filter(item => {
-                return item.increase;
-            })
-        }))
-    }
-
-    onAllEmployees = () => {
-        this.setState(({data}) => ({
-            data: data
-        }))
-    }
-
-    onMoreTh = () => {
-        this.setState(({data}) => ({
-            data: data.filter(item => {
-                if (item.salary > 1000) {
-                    return true;
-                }
-            })
-        }))
-    }
-
     filterPost = (items, filter) => {
         switch (filter) {
             case 'rise':

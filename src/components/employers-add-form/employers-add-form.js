@@ -2,19 +2,23 @@ import './employers-add-form.sass'
 import {Component} from "react";
 
 class EmployersAddForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+    state = {
             name: '',
             salary: ''
         };
-    }
+
 
     onValueChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
+
+    static onLog = () => {
+        console.log('HEy');
+    }
+
+    static logged = 'on';
 
     render() {
         const {name, salary} = this.state;
@@ -53,4 +57,6 @@ class EmployersAddForm extends Component {
     }
 }
 
+EmployersAddForm.onLog();
+console.log(EmployersAddForm.logged);
 export default EmployersAddForm;
